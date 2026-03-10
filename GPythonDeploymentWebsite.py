@@ -1,7 +1,4 @@
-git clone https://github.com/YourUsername/YourRepoName.git
-cd YourRepoName
-pip install -r requirements.txt
-streamlit run app.py
+import streamlit as st
 from subprocess import Popen, PIPE
 import threading
 import time
@@ -31,4 +28,5 @@ lt_thread = threading.Thread(target=run_localtunnel)
 lt_thread.daemon = True # Allow the main program to exit even if thread is still running
 lt_thread.start()
 print("Streamlit and localtunnel are starting. Please wait for the URL to appear.")
+
 print("You can also check the Streamlit logs for more details (e.g., if there's an error).")
